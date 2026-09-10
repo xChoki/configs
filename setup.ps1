@@ -49,6 +49,11 @@ $links = @(
        Target = "$HOME\.glzr\zebar"
        Type   = "Dir" }
 
+    # Claude
+    @{ Source = "claude/settings.json"
+       Target = "$HOME/.claude"
+       Type   = "File" }
+
     # @{ Source = "powershell\Microsoft.PowerShell_profile.ps1"
     #    Target = "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
     #    Type   = "File" }

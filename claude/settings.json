@@ -1,0 +1,16 @@
+{
+  "model": "sonnet",
+  "autoUpdatesChannel": "latest",
+  "theme": "dark",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "permissions": {
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
