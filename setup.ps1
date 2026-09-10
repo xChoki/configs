@@ -17,7 +17,30 @@
       (Configuración > Privacidad y seguridad > Para desarrolladores)
       o correr PowerShell como Administrador.
     - Para carpetas se usan Junctions, que NO requieren permisos especiales.
+
+    Este script se auto-eleva: si lo ejecutas con doble click (o sin admin),
+    se relanza solo pidiendo el UAC. No necesitas hacer nada manual.
+
+    Comando equivalente por si algún día quieres lanzarlo elevado a mano
+    desde una consola normal:
+
+        Start-Process powershell -Verb RunAs -ArgumentList "-NoExit -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+
+    O simplemente: abrir "Terminal (Administrador)" y ejecutar:
+
+        cd C:\configs
+        .\setup.ps1
 #>
+
+# ============================================================
+# AUTO-ELEVACIÓN: si no corre como Administrador, se relanza pidiendo UAC
+# ============================================================
+
+$currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Start-Process powershell -Verb RunAs -ArgumentList "-NoExit -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+    exit
+}
 
 # ============================================================
 # CONFIGURA AQUÍ TUS CONFIGURACIONES
