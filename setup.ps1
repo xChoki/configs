@@ -51,7 +51,7 @@ $links = @(
 
     # Claude
     @{ Source = "claude/settings.json"
-       Target = "$HOME/.claude"
+       Target = "$HOME/.claude/settings.json"
        Type   = "File" }
 
     # @{ Source = "powershell\Microsoft.PowerShell_profile.ps1"
