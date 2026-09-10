@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <!-- Permite correr React sin paso de build, via el script "text/babel". -->
+    <script
+      src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"
+      integrity="sha256-aS0B0wnsaDByLfE16h4MDCP1fQFccysd1YWOcV+gbBo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- Para cambiar de paleta: data-theme="nord" o data-theme="dracula" (definidas en styles.css). -->
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel" data-type="module">
+      import React, { useState, useEffect } from 'https://esm.sh/react@18?dev';
+      import { createRoot } from 'https://esm.sh/react-dom@18/client?dev';
+      import * as zebar from 'https://esm.sh/zebar@3.0';
+
+      const providers = zebar.createProviderGroup({
+        glazewm: { type: 'glazewm' },
+        date: { type: 'date', formatting: 'EEE d LLL  HH:mm:ss' },
+        cpu: { type: 'cpu' },
+        memory: { type: 'memory' },
+        battery: { type: 'battery' },
+      });
+
+      createRoot(document.getElementById('root')).render(<App />);
+
+      function App() {
+        const [output, setOutput] = useState(providers.outputMap);
+
+        useEffect(() => {
+          providers.onOutput(() => setOutput(providers.outputMap));
+        }, []);
+
+        const glazewm = output.glazewm;
+        const date = output.date;
+        const cpu = output.cpu;
+        const memory = output.memory;
+        const battery = output.battery;
+
+        return (
+          <div className="bar">
+            <div className="section left">
+              {glazewm?.currentWorkspaces.map(ws => (
+                <button
+                  key={ws.name}
+                  className={`ws ${ws.hasFocus ? 'focused' : ''}`}
+                  onClick={() =>
+                    glazewm.runCommand(`focus --workspace ${ws.name}`)
+                  }
+                >
+                  {ws.displayName ?? ws.name}
+                </button>
+              ))}
+            </div>
+
+            <div className="section center">
+              <span className="clock">{date?.formatted}</span>
+            </div>
+
+            <div className="section right">
+              {battery?.chargePercent != null && (
+                <span
+                  className={`chip ${
+                    !battery.isCharging && battery.chargePercent < 20
+                      ? 'warn'
+                      : ''
+                  }`}
+                >
+                  {battery.isCharging ? '⚡' : '🔋'}{' '}
+                  {Math.round(battery.chargePercent)}%
+                </span>
+              )}
+              <span className="chip">
+                <span className="accent">CPU</span>{' '}
+                {cpu?.usage != null ? `${Math.round(cpu.usage)}%` : '--'}
+              </span>
+              <span className="chip">
+                <span className="accent">RAM</span>{' '}
+                {memory?.usage != null ? `${Math.round(memory.usage)}%` : '--'}
+              </span>
+            </div>
+          </div>
+        );
+      }
+    </script>
+  </body>
+</html>

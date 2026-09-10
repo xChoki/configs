@@ -1,0 +1,133 @@
+/* ============================================================
+   PALETAS — cambiá cuál se usa poniendo data-theme="nord" o
+   data-theme="dracula" en el <body> de index.html. La que no
+   tiene atributo (rosepine) es la que se usa por defecto.
+   Para crear una paleta propia: copiá un bloque, cambiale el
+   nombre del data-theme y los valores de color.
+   ============================================================ */
+:root {
+  --bg: #232136;
+  --bg-alt: #2a273f;
+  --fg: #e0def4;
+  --fg-dim: #6e6986;
+  --accent: #c4a7e7;
+  --accent2: #eb6f93;
+  --accent3: #9dcfd8;
+  --warn: #f6c177;
+
+  --radius: 6px;
+  --gap: 6px;
+}
+
+body[data-theme="nord"] {
+  --bg: #2e3440;
+  --bg-alt: #3b4252;
+  --fg: #eceff4;
+  --fg-dim: #4c566a;
+  --accent: #88c0d0;
+  --accent2: #bf616a;
+  --accent3: #a3be8c;
+  --warn: #ebcb8b;
+}
+
+body[data-theme="dracula"] {
+  --bg: #282a36;
+  --bg-alt: #343746;
+  --fg: #f8f8f2;
+  --fg-dim: #6272a4;
+  --accent: #bd93f9;
+  --accent2: #ff79c6;
+  --accent3: #8be9fd;
+  --warn: #f1fa8c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 13px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.section.left {
+  justify-content: flex-start;
+}
+
+.section.center {
+  justify-content: center;
+  flex: 1;
+}
+
+.section.right {
+  justify-content: flex-end;
+}
+
+.ws {
+  border: none;
+  background: var(--bg-alt);
+  color: var(--fg-dim);
+  border-radius: var(--radius);
+  padding: 3px 9px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.ws:hover {
+  color: var(--fg);
+}
+
+.ws.focused {
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.clock {
+  color: var(--fg);
+  letter-spacing: 0.5px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  color: var(--fg);
+}
+
+.chip.warn {
+  color: var(--warn);
+}
+
+.chip .accent {
+  color: var(--accent3);
+}
