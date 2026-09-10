@@ -1,0 +1,232 @@
+{
+  "python.pythonPath": "C:\\Users\\javie\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+  "git.autofetch": true,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "explorer.confirmDelete": false,
+  "[php]": {
+    "editor.defaultFormatter": "vscode.php-language-features"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "default",
+    "*.svg": "default"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "python.defaultInterpreterPath": "C:\\Users\\USUARIO\\Downloads\\python\\venv2\\Scripts\\python.exe",
+  "workbench.colorTheme": "Kanso Ink",
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": null
+  },
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "notebook.formatOnSave.enabled": true,
+  "editor.guides.indentation": false,
+  "indenticator.width": 0.1,
+  "indenticator.color.dark": "rgba(255, 255, 255, 0.1)",
+  "editor.matchBrackets": "never",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.minimap.enabled": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "terminal.integrated.env.windows": {},
+  "console-ninja.featureSet": "Community",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 100,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "prettier.embeddedLanguageFormatting": "off",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "editor.linkedEditing": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "files.associations": {
+    "*.py": "python"
+  },
+  "eslint.enable": false,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "astro"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "redhat.telemetry.enabled": false,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "scm.experimental.showHistoryGraph": true,
+  "yaml.schemas": {
+    "file:///c%3A/Users/javie/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "terminal.integrated.env.linux": {},
+  "[vue]": {
+    "editor.defaultFormatter": null
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "codeium.enableCodeLens": false,
+  "workbench.settings.applyToAllProfiles": ["codeium.enableCodeLens"],
+  "terminal.integrated.gpuAcceleration": "off",
+  "[go]": {
+    "editor.defaultFormatter": null
+  },
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-p>": false,
+    "<C-b>": false,
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "editor.stickyScroll.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "livePreview.portNumber": 9999,
+  "editor.tabSize": 2,
+  "editor.occurrencesHighlight": "off",
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.restore": false,
+  "zenMode.hideActivityBar": false,
+  "zenMode.fullScreen": false,
+  "workbench.activityBar.location": "top",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "vim.smartRelativeLine": true,
+  "breadcrumbs.enabled": false,
+  "editor.selectionHighlight": false,
+  "editor.detectIndentation": false,
+  "git.blame.editorDecoration.enabled": false,
+  "python.analysis.typeCheckingMode": "standard",
+  "vscode_custom_css.statusbar": false,
+  "vscode_custom_css.policy": true,
+  "vscode_custom_css.imports": [
+    "file:///D:/VSCode_Custom/custom-scrollbar.css",
+    "file:///D:/VSCode_Custom/custom-title-bar.css",
+    "file:///D:/VSCode_Custom/custom-panels.css",
+    "file:///D:/VSCode_Custom/custom-tabs.css",
+    "file:///D:/VSCode_Custom/custom-sidebar.css",
+    "file:///D:/VSCode_Custom/custom-status-bar.css",
+    "file:///D:/VSCode_Custom/custom-bg.css",
+    "file:///D:/VSCode_Custom/custom-home.js",
+    "file:///D:/VSCode_Custom/custom-editor.css"
+  ],
+  "[erb]": {
+    "editor.defaultFormatter": null
+  },
+  "supermaven.enableJumpSuggestions": false,
+  "editor.largeFileOptimizations": false,
+  "glassit.alpha": 240,
+  "window.titleBarStyle": "custom",
+  "vscode_vibrancy.opacity": 0.1,
+  "vscode_vibrancy.type": "mica",
+  "workbench.colorCustomizations": {},
+  "window.systemColorTheme": "dark",
+  "window.autoDetectColorScheme": false,
+  "supermaven.enable": {
+    "*": true
+  },
+  "git.blame.statusBarItem.enabled": false,
+  "window.zoomLevel": 3,
+  "markdown-preview-enhanced.breakOnSingleNewLine": false,
+  "chat.disableAIFeatures": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.keymap": "none",
+  "rubyLsp.featuresConfiguration": {},
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": false,
+    "definition": true,
+    "workspaceSymbol": true,
+    "signatureHelp": true,
+    "typeHierarchy": true
+  },
+  "extensions.ignoreRecommendations": true,
+  "supermaven.enableFixWithSupermaven": false,
+  "remote.SSH.remotePlatform": {
+    "ECOTURISMO": "linux"
+  }
+}

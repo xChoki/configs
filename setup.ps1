@@ -26,9 +26,18 @@
 $RepoRoot = $PSScriptRoot   # carpeta donde está este script (la raíz del repo)
 
 $links = @(
-    # @{ Source = "vscode\settings.json"
-    #    Target = "$env:APPDATA\Code\User\settings.json"
-    #    Type   = "File" }
+    # VS Code
+    @{ Source = "vscode\settings.json"
+       Target = "$env:APPDATA\Code\User\settings.json"
+       Type   = "File" }
+
+    @{ Source = "vscode\keybindings.json"
+       Target = "$env:APPDATA\Code\User\keybindings.json"
+       Type   = "File" }
+
+    @{ Source = "vscode\snippets"
+       Target = "$env:APPDATA\Code\User\snippets"
+       Type   = "Dir" }
 
     # GlazeWM
     @{ Source = "glazewm"

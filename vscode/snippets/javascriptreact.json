@@ -1,0 +1,20 @@
+{
+	"expdeffunc": {
+		"prefix": "expdeffunc",
+		"body": [
+			"export default function Example(){\r",
+			"    return(\r",
+			"        <>\r",
+			"\r",
+			"        </>\r",
+			"    )\r",
+			"}"
+		],
+		"description": "expdeffunc"
+	},
+	"emptyue": {
+		"prefix": "emptyue",
+		"body": "useEffect(() => {},[])",
+		"description": "emptyue"
+	}
+}
