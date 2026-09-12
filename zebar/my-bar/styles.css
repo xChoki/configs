@@ -17,6 +17,13 @@
 
   --radius: 6px;
   --gap: 6px;
+
+  /* Separación de la barra respecto a los bordes de la pantalla.
+     Si cambias --bar-gap-top, ajusta también la altura en zpack.json
+     (debe ser altura-de-barra-deseada + --bar-gap-top). */
+  --bar-gap-top: 5px;
+  --bar-gap-side: 5px;
+  --bar-radius: 10px;
 }
 
 body[data-theme="nord"] {
@@ -53,13 +60,14 @@ body,
 }
 
 body {
-  background: var(--bg);
+  background: transparent;
   color: var(--fg);
   font-family: ui-monospace, "Cascadia Code", monospace;
   font-size: 13px;
   overflow: hidden;
   -webkit-user-select: none;
   user-select: none;
+  padding: var(--bar-gap-top) var(--bar-gap-side) 0 var(--bar-gap-side);
 }
 
 .bar {
@@ -68,6 +76,8 @@ body {
   justify-content: space-between;
   height: 100%;
   padding: 0 10px;
+  background: var(--bg);
+  border-radius: var(--bar-radius);
 }
 
 .section {
