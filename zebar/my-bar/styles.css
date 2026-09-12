@@ -1,9 +1,9 @@
 /* ============================================================
-   PALETAS — cambiá cuál se usa poniendo data-theme="nord" o
-   data-theme="dracula" en el <body> de index.html. La que no
-   tiene atributo (rosepine) es la que se usa por defecto.
-   Para crear una paleta propia: copiá un bloque, cambiale el
-   nombre del data-theme y los valores de color.
+   PALETTES — switch which one is in use by setting data-theme="nord"
+   or data-theme="dracula" on the <body> of index.html. The one
+   without an attribute (rosepine) is the one used by default.
+   To create your own palette: copy a block, change the
+   data-theme name and the color values.
    ============================================================ */
 :root {
   --bg: #232136;
@@ -18,12 +18,15 @@
   --radius: 6px;
   --gap: 6px;
 
-  /* Separación de la barra respecto a los bordes de la pantalla.
-     Si cambias --bar-gap-top, ajusta también la altura en zpack.json
-     (debe ser altura-de-barra-deseada + --bar-gap-top). */
+  /* bar separation from screen borders. */
   --bar-gap-top: 5px;
   --bar-gap-side: 5px;
   --bar-radius: 10px;
+
+  /* bg transparency */
+  --bar-opacity: 0.85;
+  --chip-opacity-boost: 0.25;
+  --chip-opacity: min(1, calc(var(--bar-opacity) + var(--chip-opacity-boost)));
 }
 
 body[data-theme="nord"] {
@@ -76,7 +79,7 @@ body {
   align-items: center;
   height: 100%;
   padding: 0 10px;
-  background: var(--bg);
+  background: rgb(from var(--bg) r g b / var(--bar-opacity));
   border-radius: var(--bar-radius);
 }
 
@@ -100,7 +103,7 @@ body {
 
 .ws {
   border: none;
-  background: var(--bg-alt);
+  background: rgb(from var(--bg-alt) r g b / var(--chip-opacity));
   color: var(--fg-dim);
   border-radius: var(--radius);
   padding: 3px 9px;
@@ -113,7 +116,7 @@ body {
 }
 
 .ws.focused {
-  background: var(--accent);
+  background: rgb(from var(--accent) r g b / var(--chip-opacity));
   color: var(--bg);
   font-weight: 600;
 }
@@ -121,6 +124,9 @@ body {
 .clock {
   color: var(--fg);
   letter-spacing: 0.5px;
+  background: rgb(from var(--bg-alt) r g b / var(--chip-opacity));
+  padding: 3px 9px;
+  border-radius: var(--radius);
 }
 
 .chip {
@@ -129,7 +135,7 @@ body {
   gap: 4px;
   padding: 3px 9px;
   border-radius: var(--radius);
-  background: var(--bg-alt);
+  background: rgb(from var(--bg-alt) r g b / var(--chip-opacity));
   color: var(--fg);
 }
 
