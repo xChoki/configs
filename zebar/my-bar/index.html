@@ -28,6 +28,7 @@
         cpu: { type: 'cpu' },
         memory: { type: 'memory' },
         battery: { type: 'battery' },
+        media: { type: 'media' },
       });
 
       createRoot(document.getElementById('root')).render(<App />);
@@ -44,6 +45,8 @@
         const cpu = output.cpu;
         const memory = output.memory;
         const battery = output.battery;
+        const media = output.media;
+        const session = media?.currentSession;
 
         return (
           <div className="bar">
@@ -77,6 +80,20 @@
                   {battery.isCharging ? '⚡' : '🔋'}{' '}
                   {Math.round(battery.chargePercent)}%
                 </span>
+              )}
+              {session && (
+                <button
+                  className="chip media"
+                  onClick={() => media.togglePlayPause()}
+                  title={[session.title, session.artist].filter(Boolean).join(' - ')}
+                >
+                  <span className="media-icon">
+                    {session.isPlaying ? '⏸' : '▶'}
+                  </span>
+                  <span className="media-title">
+                    {[session.title, session.artist].filter(Boolean).join(' - ')}
+                  </span>
+                </button>
               )}
               <span className="chip">
                 <span className="accent">CPU</span>{' '}
