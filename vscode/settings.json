@@ -15,7 +15,7 @@
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.guides.indentation": false,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.stickyScroll.enabled": false,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.occurrencesHighlight": "off",
