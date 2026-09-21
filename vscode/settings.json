@@ -95,7 +95,6 @@
   // ==========================================================================
   // PYTHON
   // ==========================================================================
-  "python.pythonPath": "C:\\Users\\javie\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
   "python.defaultInterpreterPath": "C:\\Users\\USUARIO\\Downloads\\python\\venv2\\Scripts\\python.exe",
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "standard",
